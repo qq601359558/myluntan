@@ -68,7 +68,7 @@
   <sql id="Base_Column_List">
     USER_ID, LOGIN_NAME, password, latest_time
   </sql>
-  <select id="selectByExample" parameterType="com.luntan.base.login.bo.LogininfoExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.luntan.base.login.bo.LogininfoExample">
     select
     <if test="distinct">
       distinct
@@ -195,7 +195,7 @@
   </update>
   <!-- sql 映射  自己写 -->
   <select 
-  <!-- id 是命名空间的唯一标识，可以用来代表这条sql语句，一个命名空间对应一个 dao的接口（方法），
+  <!-- id  必须配置 是命名空间的唯一标识，可以用来代表这条sql语句，一个命名空间对应一个 dao的接口（方法），
   	这个id 也对应dao里面的某个方法（相当于方法的实现），因此id 应与方法名一致
    -->
   id="login"
@@ -205,10 +205,12 @@
   	parameterType  主要指定参数类型 主要有 int short  long string 或者对象
   -->
   parameterType="com.luntan.base.login.bo.User"
-  <!-- resultType 与resultMap  二选一    前者指定返回可以是基本类型，也可以是bean
+  <!-- resultType 与resultMap   二选一    前者指定返回可以是基本类型，也可以是bean
     resultMap  返回 我们用resultMap 标签定义的映射类型，也是mybatis 高级映射的关键
    -->
-   
+  resultType="hashMap"
+  <!-- flushCache  可选配置   如过设置为true ，任何时候只要语句被调用，将会导致本地缓存和二级缓存都被清空-->
+  flushCashe="false"
   >
   
   </select>
