@@ -10,40 +10,42 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
 <!-- 自动扫描  使用context:component-scan 标签 ，指定 需要扫描 的包 ,注解时使用 -->
-<context:component-scan base-package="com.hzwq.config"></context:component-scan>
+<context:component-scan base-package="com.luntan"></context:component-scan>
+
+
 <!-- 引入配置文件 -->
 <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" >
 	<property name="location" value="classpath:ojdbc.properties"></property>
 </bean>
 <!-- 配置连接池 -->
-<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-	<property name="driverClassName" value="${driver}"></property>
-	<property name="url" value="${url}"></property>
-	<property name="username" value="${username}"></property>
-	<property name="password" value="${password}"></property>
-	<!-- 初始化数量 -->
-	<property name="initialSize" value="${initialSize}"></property>
-	<!-- 最大活动数量 -->
-	<property name="maxActive" value="${maxActive}"></property>
-	<!-- 最大空闲数量 -->
-	<property name="maxIdle" value="${maxIdle}"></property>
-	<!-- 最小空闲数量 -->
-	<property name="minIdle" value="${minIdle}"></property>
-	<!-- 获取连接最大等待时间 -->
-	<property name="maxWait" value="${maxWait}"></property>
-</bean>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${driver}"></property>
+		<property name="url" value="${url}"></property>
+		<property name="username" value="${username}"></property>
+		<property name="password" value="${password}"></property>
+		<!-- 初始化数量 -->
+		<property name="initialSize" value="${initialSize}"></property>
+		<!-- 最大活动数量 -->
+		<property name="maxActive" value="${maxActive}"></property>
+		<!-- 最大空闲数量 -->
+		<property name="maxIdle" value="${maxIdle}"></property>
+		<!-- 最小空闲数量 -->
+		<property name="minIdle" value="${minIdle}"></property>
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="${maxWait}"></property>
+	</bean>
 <!-- 与mybatis 结合    不需要mybatis 的配置映射文件     调用sqlsession工厂类-->
 	<bean id="sqlSessionFactory"
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource"  ref="dataSource"></property>
 		<property name="mapperLocations"
-			value="classpath:com/hzwq/mapper/*.xml">
+			value="classpath:com/luntan/**/*.xml">
 		</property>
 	</bean>
 	<!-- dao 接口所在包名，spring 会自动查找其下的类 -->
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.luntan.dao"></property>
+		<property name="basePackage" value="com.luntan"></property>
 		<property name="sqlSessionFactoryBeanName"
 			value="sqlSessionFactory">
 		</property>
@@ -52,6 +54,6 @@
 	
 	<bean id="transactionmanager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-	<property name="dataSource" ref="dataSource"></property>
+		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 </beans>
