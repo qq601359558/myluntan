@@ -5,7 +5,7 @@ import com.luntan.base.bo.LoginInfoExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-public interface LoginInfoMapper {
+public interface ILoginDao {
     long countByExample(LoginInfoExample example);
 
     int deleteByExample(LoginInfoExample example);

@@ -5,14 +5,14 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import com.luntan.base.bo.User;
-import com.luntan.base.dao.UserMapper;
-@Service("baseServiceImpl")
+import com.luntan.base.dao.IUserDao;
+@Service("baseService")
 public class BaseServiceImpl implements IBaseService {
 	@Resource
-	private  UserMapper userMapper;
-	public User login(int userId) {
+	private  IUserDao iUserDao;
+	public User getUserById(int userId) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.iUserDao.selectByPrimaryKey(userId);
 	}
 
 }

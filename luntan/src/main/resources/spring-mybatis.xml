@@ -39,13 +39,13 @@
 		class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource"  ref="dataSource"></property>
 		<property name="mapperLocations"
-			value="classpath:com/luntan/**/*.xml">
+			value="classpath:com/luntan/mapper/*.xml">
 		</property>
 	</bean>
 	<!-- dao 接口所在包名，spring 会自动查找其下的类 -->
 	
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.luntan"></property>
+		<property name="basePackage" value="com.luntan.base.dao"></property>
 		<property name="sqlSessionFactoryBeanName"
 			value="sqlSessionFactory">
 		</property>
