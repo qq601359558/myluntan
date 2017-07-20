@@ -1,0 +1,36 @@
+.titles{
+    font-family: ºÚÌå;
+    font-size: 40px;
+    font-weight: 800;
+    color: azure;
+    line-height: 40px;
+
+
+}
+.in{
+    border: solid azure;
+    height: 40px;
+    font-weight: 300;
+    font-size: 25px;
+    width: 300px;
+    color: gray;
+}
+body{
+    background: dimgrey;
+}
+#loginForm{
+    position: absolute;
+    top: 280px;
+    left: 400px;
+}
+button{
+    color: white;
+    border: white;
+    background-color: darkgrey;
+    height: 45px;
+    width: 150px;
+    font-size: 25px;
+    font-family: ºÚÌå;
+    position: relative;
+    left: 90px;
+}
