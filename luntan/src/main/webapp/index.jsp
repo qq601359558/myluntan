@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,6 +20,7 @@
 <script type="text/javascript">
 $(document).ready(function () {
     inputStyle();
+    changeBg();
 })
 
 </script>

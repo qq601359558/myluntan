@@ -193,4 +193,16 @@
       latest_time = #{latestTime,jdbcType=TIMESTAMP}
     where USER_ID = #{userId,jdbcType=VARCHAR}
   </update>
+  <!-- 自己写的sql -->
+  <select id="getLogInfo" parameterType="com.luntan.base.bo.LoginInfo" resultType="com.luntan.base.bo.LoginInfo">
+  select 
+    t.USER_ID as 'userId',
+    t.LOGIN_NAME as 'loginName',
+    t.password as 'password'
+from
+    luntan.login_info t
+
+where t.LOGIN_NAME=#{loginName} and t.password =#{password}
+  </select>
+  
 </mapper>

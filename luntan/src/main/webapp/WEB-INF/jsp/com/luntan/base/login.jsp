@@ -2,25 +2,26 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="../css/indexStyle.css">
+<link  type="text/css" rel="stylesheet" href="../css/base/fixed-positioning.css">
+ <link type="text/css" rel="stylesheet" href="../css/base/main.css">
 </head>
 <script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="../js/base/indexJs.js"></script>
+<script type="text/javascript" src="../js/base/skrollr.min.js"></script>
 <body>
-<form id="loginForm"  action="login.so">
-    <span class="titles">USERNAME:</span><input id="username" class="in" type="text" value="用户名"/><br/><br/><br/>
-    <span class="titles">PASSWORD:</span><input id="password" class="in" type="password" value="请输入密码"/><br/><br/><br/>
-    <button type="submit" >LOGIN</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="reset">RESET</button>
-</form>
+
+<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+
+<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+
+<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
+<div id="easing_wrapper" data-12000="display:none;">
+
+
+</div>
 </body>
 <script type="text/javascript">
-$(document).ready(function () {
-    inputStyle();
-})
-
+ var s=skrollr.init({
+     edgeStrategy:'set',
+ })
 </script>
 </html>

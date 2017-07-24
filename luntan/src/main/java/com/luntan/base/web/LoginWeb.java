@@ -20,8 +20,13 @@ public class LoginWeb implements ILoginWeb {
 	private IBaseService baseService;
 	@RequestMapping("login.so")
 	public String login(LoginInfo loginInfo) {
+		LoginInfo info=baseService.login(loginInfo);
+		if(info!=null){
+			return "base/login";
+		}else{
+			return  "error";
+		}
 		
-		return "base/login";
 	}
 
 }
