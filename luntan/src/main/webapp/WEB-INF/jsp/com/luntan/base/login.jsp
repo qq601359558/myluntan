@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link  type="text/css" rel="stylesheet" href="../css/base/fixed-positioning.css">
- <link type="text/css" rel="stylesheet" href="../css/base/main.css">
+<link  type="text/css" rel="stylesheet" href="<%=request.getContextPath() %>/css/base/fixed-positioning.css">
+ <link type="text/css" rel="stylesheet" href="<%=request.getContextPath() %>/css/base/main.css">
 </head>
-<script type="text/javascript" src="../js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="../js/base/skrollr.min.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath() %>/js/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath() %>/js/base/skrollr.min.js"></script>
 <body>
 
 <div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>

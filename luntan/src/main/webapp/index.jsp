@@ -8,8 +8,8 @@
 <script type="text/javascript" src="js/base/indexJs.js"></script>
 <body>
 <form id="loginForm"  action="login.so">
-    <span class="titles">USERNAME:</span><input id="username" class="in" type="text" value="用户名"/><br/><br/><br/>
-    <span class="titles">PASSWORD:</span><input id="password" class="in" type="password" value="请输入密码"/><br/><br/><br/>
+    <span class="titles">USERNAME:</span><input id="username" name="loginName" class="in" type="text" value="用户名"/><br/><br/><br/>
+    <span class="titles">PASSWORD:</span><input id="password" name="password" class="in" type="password" value="请输入密码"/><br/><br/><br/>
     <button type="submit" >LOGIN</button>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
