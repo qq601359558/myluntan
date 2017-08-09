@@ -199,10 +199,18 @@
     t.USER_ID as 'userId',
     t.LOGIN_NAME as 'loginName',
     t.password as 'password'
-from
+  from
     luntan.login_info t
 
 where t.LOGIN_NAME=#{loginName} and t.password =#{password}
+  </select>
+  <!-- 查询论坛类别 -->
+  <select id="getCateg" resultType="java.util.Map">
+  SELECT
+	c.id id,
+	c.cate_name cateName 
+FROM
+	categories c
   </select>
   
 </mapper>

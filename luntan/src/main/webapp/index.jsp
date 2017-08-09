@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/indexStyle.css">
 </head>
 <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
-<script type="text/javascript" src="js/base/indexJs.js"></script>
+<script type="text/javascript" src="js/indexJs.js"></script>
 <body>
 <form id="loginForm"  action="login.so">
     <span class="titles">USERNAME:</span><input id="username" name="loginName" class="in" type="text" value="用户名"/><br/><br/><br/>

@@ -10,4 +10,7 @@ public interface IBaseService {
 	 * @param IloginInfo
 	 * */
 	public LoginInfo login(LoginInfo loginInfo);
+	/**获取论坛类别*/
+	public String getCateg();
+	
 }

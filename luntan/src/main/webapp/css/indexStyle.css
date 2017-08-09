@@ -1,5 +1,5 @@
 .titles{
-    font-family: ΊΪΜε;
+    font-family: ι»‘δ½“;
 
     font-size: 40px;
     font-weight: 800;
@@ -13,13 +13,15 @@
     height: 40px;
     font-weight: 300;
     font-size: 25px;
-    background-color:transparent;
+    background-color:gray;
+    opacity: .5;
     width: 300px;
     color: gray;
+
 }
 
 #loginForm{
-    position: absolute;
+    position:  absolute;
     top: 280px;
     left: 400px;
 }
@@ -30,7 +32,7 @@ button{
     height: 45px;
     width: 150px;
     font-size: 25px;
-    font-family: ΊΪΜε;
+    font-family: ι»‘δ½“;
     position: relative;
     left: 90px;
 }

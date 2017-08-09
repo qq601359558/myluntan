@@ -21,8 +21,12 @@ public class TestFunction {
 	private IBaseService baseService=null;
 	@Test
 	public void test(){
-	User user=baseService.getUserById(1);
-	logger.info(user.getUserName());
+	//User user=baseService.getUserById(1);
+		System.out.println(111);
+		String str=baseService.getCateg();
+		System.out.println(str);
+		
+	logger.info(str);
 	}
 	
 	

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.luntan.base.bo.LoginInfo;
 import com.luntan.base.bo.User;
@@ -22,11 +23,18 @@ public class LoginWeb implements ILoginWeb {
 	public String login(LoginInfo loginInfo) {
 		LoginInfo info=baseService.login(loginInfo);
 		if(info!=null){
-			return "base/login";
+			return "base/mainPage";
 		}else{
 			return  "error";
 		}
 		
+	}
+	
+	@RequestMapping("getCateg.so")
+	@ResponseBody
+	public String getCateg(){
+		String str=baseService.getCateg();
+		return str;
 	}
 
 }
